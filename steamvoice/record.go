@@ -9,7 +9,7 @@ package steamvoice
 import (
 	"unsafe"
 
-	"github.com/BenLubar/steamworks/internal"
+	"github.com/qProust/steamworks/internal"
 )
 
 // StartRecording starts voice recording.
