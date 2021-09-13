@@ -8,11 +8,11 @@ package internal
 /*
 #cgo CXXFLAGS: -std=c++11
 #cgo CPPFLAGS: -isystem ${SRCDIR}/include
-#cgo windows LDFLAGS: -L ${SRCDIR}/lib/windows
-#cgo linux,386 LDFLAGS: -L ${SRCDIR}/lib/linux32
-#cgo linux,amd64 LDFLAGS: -L ${SRCDIR}/lib/linux64
-#cgo linux windows,386 darwin LDFLAGS: -lsteam_api
-#cgo windows,amd64 LDFLAGS: -lsteam_api64
+#cgo windows LDFLAGS: -L ${SRCDIR}/lib/windows -Wl,-rpath=\$ORIGIN
+#cgo linux,386 LDFLAGS: -L ${SRCDIR}/lib/linux32 -Wl,-rpath=\$ORIGIN
+#cgo linux,amd64 LDFLAGS: -L ${SRCDIR}/lib/linux64 -Wl,-rpath=\$ORIGIN
+#cgo linux windows,386 darwin LDFLAGS: -lsteam_api -Wl,-rpath=\$ORIGIN
+#cgo windows,amd64 LDFLAGS: -lsteam_api64 -Wl,-rpath=\$ORIGIN
 
 #include "api.gen.h"
 */
